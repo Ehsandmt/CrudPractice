@@ -1,10 +1,31 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿#define sadraPc
+
+#if sadraPc
+using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+#endif 
 
 namespace CrudPractice;
 
 public class CrudContext : DbContext
 {
-  
+
+#if sadraPc
+private static string _dbPath;
+static CrudContext()
+{
+    var folder = Environment.SpecialFolder.ApplicationData;
+    var folderPath = Environment.GetFolderPath(folder);
+    var appName = Assembly.GetExecutingAssembly().GetName().Name;
+
+    _dbPath = Path.Combine(folderPath, appName!, "crud.db");
+}  
+
+   protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+   {
+    optionsBuilder.UseSqlite($"Data Source={_dbPath}");
+   }
+#else
 
    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
    {
@@ -13,7 +34,8 @@ public class CrudContext : DbContext
    }
 
    private const string ConnectionString = "Server=localhost;Database=crud;Trusted_Connection=True;";
-   
+#endif  
+
     public DbSet<User>? Users { get; set; }
 }
 
