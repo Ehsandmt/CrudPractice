@@ -1,8 +1,12 @@
 using CrudPractice;
-
+using Serilog;
+using Serilog.Events;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+//configure seriLog
+builder.Host.UseSerilog();
 
 // Add services to the container.
 
@@ -21,6 +25,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 
