@@ -19,7 +19,7 @@ static CrudContext()
     var folderPath = Environment.GetFolderPath(folder);
     var appName = Assembly.GetExecutingAssembly().GetName().Name;
 
-    _dbPath = Path.Combine(folderPath, appName!, "crud.db");
+    _dbPath = Path.Combine(folderPath, appName!, "DataBase","crud.db");
 }  
 
    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
