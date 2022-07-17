@@ -1,7 +1,8 @@
 ﻿#define sadraPc
 
-#if sadraPc
 using Microsoft.EntityFrameworkCore;
+
+#if sadraPc
 using System.Reflection;
 #endif 
 
