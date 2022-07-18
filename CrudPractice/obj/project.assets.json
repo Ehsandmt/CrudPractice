@@ -673,6 +673,18 @@
           "lib/net5.0/Serilog.Sinks.File.dll": {}
         }
       },
+      "Serilog.Sinks.Map/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "2.8.0"
+        },
+        "compile": {
+          "lib/net5.0/Serilog.Sinks.Map.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Serilog.Sinks.Map.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.0.6": {
         "type": "package",
         "dependencies": {
@@ -2207,6 +2219,24 @@
         "serilog.sinks.file.nuspec"
       ]
     },
+    "Serilog.Sinks.Map/1.0.2": {
+      "sha512": "JbPBAeD5hxUQw8TZg3FlOnqVsSu1269nvqFm5DQ7hc+AmsB+hItl+zMSDphMbPJXjL8KdpMRSWNkGi7zTKRmCA==",
+      "type": "package",
+      "path": "serilog.sinks.map/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net5.0/Serilog.Sinks.Map.dll",
+        "lib/net5.0/Serilog.Sinks.Map.xml",
+        "lib/netstandard1.0/Serilog.Sinks.Map.dll",
+        "lib/netstandard1.0/Serilog.Sinks.Map.xml",
+        "lib/netstandard2.0/Serilog.Sinks.Map.dll",
+        "lib/netstandard2.0/Serilog.Sinks.Map.xml",
+        "serilog.sinks.map.1.0.2.nupkg.sha512",
+        "serilog.sinks.map.nuspec"
+      ]
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.0.6": {
       "sha512": "zssYqiaucyGArZfg74rJuzK0ewgZiidsRVrZTmP7JLNvK806gXg6PGA46XzoJGpNPPA5uRcumwvVp6YTYxtQ5w==",
       "type": "package",
@@ -2992,6 +3022,7 @@
       "Serilog >= 2.11.0",
       "Serilog.AspNetCore >= 6.0.0",
       "Serilog.Sinks.File >= 5.0.0",
+      "Serilog.Sinks.Map >= 1.0.2",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -3070,6 +3101,10 @@
           "Serilog.Sinks.File": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "Serilog.Sinks.Map": {
+            "target": "Package",
+            "version": "[1.0.2, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

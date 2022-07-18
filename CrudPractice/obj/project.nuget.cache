@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "l0ABaR3Hd91oDUHQc+uyHcOyGXWnH1BUYv6CppjkbjmFaN4LcVX0/Z07za7581pU9MHXX+rjzPoMJJ6Pz4eAgg==",
+  "dgSpecHash": "9JENKT7OwwiY8oQNEeKohBnxXzWkvSwhHfp0QxmM+upMPx4HGxu37sL0T3q/YopmDscu3HhHTV+WPsImIThsQA==",
   "success": true,
   "projectFilePath": "D:\\Sadra\\source\\repos\\CrudPractice\\CrudPractice\\CrudPractice.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,7 @@
     "C:\\Users\\RJL\\.nuget\\packages\\serilog.sinks.console\\4.0.1\\serilog.sinks.console.4.0.1.nupkg.sha512",
     "C:\\Users\\RJL\\.nuget\\packages\\serilog.sinks.debug\\2.0.0\\serilog.sinks.debug.2.0.0.nupkg.sha512",
     "C:\\Users\\RJL\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512",
+    "C:\\Users\\RJL\\.nuget\\packages\\serilog.sinks.map\\1.0.2\\serilog.sinks.map.1.0.2.nupkg.sha512",
     "C:\\Users\\RJL\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\RJL\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
     "C:\\Users\\RJL\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",
