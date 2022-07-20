@@ -14,4 +14,5 @@
 //****
 
 //todo: maybe log to mssql instead of fils on disk?
+//todo: maybe some error messages?
 
