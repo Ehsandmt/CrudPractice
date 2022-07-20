@@ -1,7 +1,5 @@
 using CrudPractice;
 using Serilog;
-using Serilog.Events;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CrudContext>();
 
+builder.Services.ConfigureLoggerManager();
 
 var app = builder.Build();
 

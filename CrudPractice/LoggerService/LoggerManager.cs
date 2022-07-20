@@ -9,73 +9,37 @@ public class LoggerManager : ILoggerManager
 {
     static LoggerManager()
     {
-        _logger = 
-
+        _logger = ConfigureLogger();
     }
 
     private static readonly Serilog.ILogger _logger; 
-    private static string _logPath 
-    {
-        get
-        {  
+    private static string LogPath(LogEventLevel? level = null)
+    {  
             var appDataDir = Environment.SpecialFolder.ApplicationData;
-            var logPath = Environment.GetFolderPath(appDataDir);
             var appName = Assembly.GetExecutingAssembly().FullName;
-            logPath = Path.Combine(logPath, appName!, "logs");
+            var logPath = Environment.GetFolderPath(appDataDir);
+
+            logPath = Path.Combine(logPath, appName!);
+
+            if(level is not null)
+                logPath = Path.Combine(logPath, level.ToString()!);
+
+            logPath = Path.Combine(logPath, $"log.txt");
 
             return logPath;
-        }
     }
 
-    private static Serilog.ILogger ConfigureLogger()
-    {
-        return  new LoggerConfiguration()
-        .WriteTo.Console()
+    private static Serilog.ILogger ConfigureLogger() => new LoggerConfiguration()
         .MinimumLevel.Debug()
-        .WriteTo.Conditional(e => e.Level == LogEventLevel.Fatal, conf => conf.File()) 
-        .File(_logPath, rollingInterval: RollingInterval.Day, shared: true)
-        .CreateLogger();
-    }
-        
-     
+        .WriteTo.Map(e => e.Level, (level, conf) => conf.Async(con =>
+            con.File(LogPath(level), rollingInterval: RollingInterval.Day, shared: true)))
+            .CreateLogger();
 
-    public void LogDebug(string message)
-    {
-        throw new NotImplementedException();
-    }
+    public void LogDebug(string message, object?[]? param = null) => _logger.Debug(message, param);
 
-    public Task LogDebugAsync(string message)
-    {
-        throw new NotImplementedException();
-    }
+    public void LogError(string message, object?[]? param = null) => _logger.Error(message, param);
 
-    public void LogError(string message)
-    {
-        throw new NotImplementedException();
-    }
+    public void LogInfo(string message, object?[]? param = null) => _logger.Information(message, param);
 
-    public Task LogErrorAsync(string message)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void LogInfo(string message)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task LogInfoAsync(string message)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void LogWarn(string message)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task LogWarnAsync(string message)
-    {
-        throw new NotImplementedException();
-    }
+    public void LogWarn(string message, object?[]? param = null) => _logger.Warning(message, param);
 }

@@ -2,13 +2,10 @@ namespace CrudPractice.Interfaces;
 
 public interface ILoggerManager
 {
-    void LogInfo(string message);
-    void LogWarn(string message);
-    void LogDebug(string message);
-    void LogError(string message);     
+    void LogInfo(string message, object?[]? param);
+    void LogWarn(string message, object?[]? param);
+    void LogDebug(string message, object?[]? param);
+    void LogError(string message, object?[]? param);
 
-    Task LogInfoAsync(string message);
-    Task LogWarnAsync(string message);
-    Task LogDebugAsync(string message);
-    Task LogErrorAsync(string message);     
+    //serilog have a async capability builtin
 }

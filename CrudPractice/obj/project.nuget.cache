@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9JENKT7OwwiY8oQNEeKohBnxXzWkvSwhHfp0QxmM+upMPx4HGxu37sL0T3q/YopmDscu3HhHTV+WPsImIThsQA==",
+  "dgSpecHash": "t5seUZp7uY5fRipkjreikeolhuySv17bfCMvjFmhkXREXprjTBj80rDBdEmhzQZ0pGnCrrbpjHI9rd5SJnJC1A==",
   "success": true,
   "projectFilePath": "D:\\Sadra\\source\\repos\\CrudPractice\\CrudPractice\\CrudPractice.csproj",
   "expectedPackageFiles": [
@@ -50,6 +50,7 @@
     "C:\\Users\\RJL\\.nuget\\packages\\serilog.extensions.logging\\3.1.0\\serilog.extensions.logging.3.1.0.nupkg.sha512",
     "C:\\Users\\RJL\\.nuget\\packages\\serilog.formatting.compact\\1.1.0\\serilog.formatting.compact.1.1.0.nupkg.sha512",
     "C:\\Users\\RJL\\.nuget\\packages\\serilog.settings.configuration\\3.3.0\\serilog.settings.configuration.3.3.0.nupkg.sha512",
+    "C:\\Users\\RJL\\.nuget\\packages\\serilog.sinks.async\\1.5.0\\serilog.sinks.async.1.5.0.nupkg.sha512",
     "C:\\Users\\RJL\\.nuget\\packages\\serilog.sinks.console\\4.0.1\\serilog.sinks.console.4.0.1.nupkg.sha512",
     "C:\\Users\\RJL\\.nuget\\packages\\serilog.sinks.debug\\2.0.0\\serilog.sinks.debug.2.0.0.nupkg.sha512",
     "C:\\Users\\RJL\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512",
